@@ -9,12 +9,14 @@ function App() {
         drag
         dragConstraints={{ left: 100 }}
         whileDrag={{ scale: 1.5, backgroundColor: "lime" }}
-         animate={{
-          rotate: [0, 180, 180, -360],
-          x: [0, 0, 200, 0],
-          y: [100, 100, -200, 0],
+        animate={{
+          rotate: [0, 180, 0, 0],
+          x: [0, 100, 100, 0],
+          // y: [100, 100, 0, -200],
+          scale: [1, 1.3, 1.3, 1],
+          borderRadius: [300, 0, 0, 300],
         }}
-        transition={{ repeat: Infinity, duration: 2 }}
+        transition={{ repeat: Infinity, duration: 10, type: "tween" }}
         whileTap={{ scale: 0.4 }}
         whileHover={{ scale: 1.5, borderRadius: 0, backgroundColor: "crimson" }}
         onClick={() => {
