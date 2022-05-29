@@ -1,6 +1,5 @@
 import React from "react";
 import { AiOutlinePoweroff, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header className="w-full flex justify-end">

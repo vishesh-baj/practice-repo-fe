@@ -1,10 +1,10 @@
+import React from "react";
 import { PATHS } from "./paths";
 import Login from "../pages/Login/Login";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Customers from "../pages/Customers/Customers";
 import Clients from "../pages/Clients/Clients";
 import Campaigns from "../pages/Campaigns/Campaigns";
-
 const routes = [
   { key: "route01", path: PATHS.login, element: <Login /> },
   { key: "route02", path: PATHS.dashboard, element: <Dashboard /> },
