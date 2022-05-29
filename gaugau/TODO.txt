@@ -1,0 +1,14 @@
+PHASE 1 
+
+TODO:
+    1. Create Navbar 
+    2. Create Sidebar 
+    3. Create wrapper component 
+        a. Create Layout component 
+        b. configure routing in layout wrapper 
+    4. Create Table Component 
+
+
+
+
+
