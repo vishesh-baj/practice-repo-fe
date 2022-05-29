@@ -12,23 +12,23 @@ const Sidebar = () => {
       </div>
       <ul className="w-full h-auto bg-white">
         <NavLink to={PATHS.dashboard}>
-          <li className="pl-5 py-4 hover:bg-slate-500">
+          <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
             <h1>Dashboard</h1>
           </li>
         </NavLink>
         <hr />
         <NavLink to={PATHS.customers}>
-          <li className="pl-5 py-4 hover:bg-slate-500">
+          <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
             <h1>Customer</h1>
           </li>
         </NavLink>
         <NavLink to={PATHS.clients}>
-          <li className="pl-5 py-4 hover:bg-slate-500">
+          <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
             <h1>Client</h1>
           </li>
         </NavLink>
         <NavLink to={PATHS.campaigns}>
-          <li className="pl-5 py-4 hover:bg-slate-500">
+          <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
             <h1>Campaign</h1>
           </li>
         </NavLink>

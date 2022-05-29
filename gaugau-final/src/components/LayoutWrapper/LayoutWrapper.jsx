@@ -7,5 +7,4 @@ const LayoutWrapper = ({ children }) => {
     </div>
   );
 };
-
 export default LayoutWrapper;
