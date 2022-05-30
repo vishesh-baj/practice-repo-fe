@@ -1,5 +1,10 @@
 import React, { useMemo } from "react";
-import { useTable, useSortBy, useGlobalFilter } from "react-table";
+import {
+  useTable,
+  useSortBy,
+  useGlobalFilter,
+  usePagination,
+} from "react-table";
 import { COLUMNS } from "./columns";
 import GlobalFilter from "./GlobalFilter";
 import MOCK_DATA from "./MOCK_DATA.json";
@@ -14,24 +19,36 @@ const DataTable = () => {
     },
 
     useGlobalFilter,
-    useSortBy
+    useSortBy,
+    usePagination
   );
 
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
+    // rows,
+    page,
+    nextPage,
+    previousPage,
+    canPreviousPage,
+    canNextPage,
+    pageOptions,
+    gotoPage,
+    pageCount,
     prepareRow,
     state,
     setGlobalFilter,
   } = tableInstance;
 
-  const { globalFilter } = state;
+  const { globalFilter, pageIndex } = state;
   return (
     <>
-      <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-      <table className="table-auto" {...getTableProps()}>
+      <div className="flex w-full justify-between overflow-scroll items-center">
+        <h1 className="font-semibold text-2xl">Customer List</h1>
+        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+      </div>
+      <table className="mt-10" {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => {
             return (
@@ -39,7 +56,7 @@ const DataTable = () => {
                 {headerGroup.headers.map((col) => {
                   return (
                     <th
-                      className="border-primaryColor"
+                      className="text-primaryColor font-light"
                       {...col.getHeaderProps(col.getSortByToggleProps())}
                     >
                       {col.render("Header")}
@@ -53,7 +70,7 @@ const DataTable = () => {
         </thead>
 
         <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
+          {page.map((row) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
@@ -67,6 +84,48 @@ const DataTable = () => {
           })}
         </tbody>
       </table>
+
+      <div className="flex justify-center gap-20 mt-3">
+        <span>
+          Page{" "}
+          <strong>
+            <span>
+              {" "}
+              Go to:{" "}
+              <input
+                className="text-center w-10"
+                onChange={(e) => {
+                  const pageNumber = e.target.value
+                    ? Number(e.target.value) - 1
+                    : 0;
+                  gotoPage(pageNumber);
+                }}
+                type="number"
+                defaultValue={pageIndex + 1}
+              />{" "}
+            </span>{" "}
+            of {pageOptions.length}{" "}
+          </strong>
+        </span>
+
+        <div className="flex gap-5">
+          <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+            {"<<"}
+          </button>
+          <button disabled={!canPreviousPage} onClick={() => previousPage()}>
+            {"<"}
+          </button>
+          <button disabled={!canNextPage} onClick={() => nextPage()}>
+            {">"}
+          </button>
+          <button
+            onClick={() => gotoPage(pageCount - 1)}
+            disabled={!canNextPage}
+          >
+            {">>"}
+          </button>
+        </div>
+      </div>
     </>
   );
 };
