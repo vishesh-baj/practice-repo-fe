@@ -18,7 +18,9 @@ const Dashboard = () => {
         dashboardData.map((item) => (
           <div className="flex flex-col w-full h-[25vh] justify-center items-center bg-sky-100">
             {/* CREATE FELPER OBJECT FOR DASHBOAD */}
-            <h1 className="text-lg">{Object.entries(item)[0][1]}</h1>
+            <h1 className="text-4xl font-bold text-primaryColor mb-5">
+              {Object.entries(item)[0][1]}
+            </h1>
             {/* CONVERT TO APPROPRATE STRING */}
             <h1>{startCase(Object.entries(item)[0][0])}</h1>
           </div>

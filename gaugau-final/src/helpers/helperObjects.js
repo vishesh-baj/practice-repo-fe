@@ -1,6 +1,7 @@
 import { MdOutlineDelete } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
 
+// Customers columnsObject
 export const COLUMNS = [
   {
     Header: "S.No",
@@ -37,11 +38,17 @@ export const COLUMNS = [
   { Header: "Tehsil", accessor: "tehsil" },
   {
     Header: "Actions",
-    Cell: (
-      <div className="flex justify-center gap-5">
-        <MdOutlineDelete className="cursor-pointer" size={20} />
-        <FiEdit className="cursor-pointer" size={20} />
-      </div>
-    ),
+    Cell: (row) => {
+      return (
+        <div className="flex justify-center gap-5">
+          <MdOutlineDelete
+            onClick={() => console.log(row)}
+            className="cursor-pointer"
+            size={20}
+          />
+          <FiEdit className="cursor-pointer" size={20} />
+        </div>
+      );
+    },
   },
 ];

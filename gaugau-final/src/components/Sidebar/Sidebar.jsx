@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <aside className="fixed -left-[100%] w-[20vw] h-screen top-0 md:left-0 shadow-lg">
       {/* div for logo */}
-      <div className="w-full h-[8vh] flex justify-center items-center bg-teal-500">
+      <div className="w-full h-[8vh] flex justify-center items-center bg-white">
         {/*  Here Image will come in future */}
         <span>GauGau</span>
       </div>

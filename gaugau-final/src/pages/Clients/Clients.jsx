@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getClients } from "../../api/clients";
+import ClientsTabs from "./Tabs";
 const Clients = () => {
+  useEffect(() => {
+    let fetchData = async () => {
+      const fetchData = await getClients();
+      console.log(fetchData);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div>
-      <h1>Clients</h1>
+      <ClientsTabs />
     </div>
   );
 };

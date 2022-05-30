@@ -5,13 +5,13 @@ import {
   useGlobalFilter,
   usePagination,
 } from "react-table";
-import { COLUMNS } from "./columns";
 import GlobalFilter from "./GlobalFilter";
-import MOCK_DATA from "./MOCK_DATA.json";
 import "./table.css";
-const DataTable = () => {
-  const columns = useMemo(() => COLUMNS, []);
-  const data = useMemo(() => MOCK_DATA, []);
+
+const DataTable = ({ customerData, customerColumns }) => {
+  const columns = useMemo(() => customerColumns, []);
+
+  const data = useMemo(() => customerData, []);
   const tableInstance = useTable(
     {
       columns,
@@ -48,7 +48,7 @@ const DataTable = () => {
         <h1 className="font-semibold text-2xl">Customer List</h1>
         <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
       </div>
-      <table className="mt-10" {...getTableProps()}>
+      <table className="mt-10 container" {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => {
             return (
