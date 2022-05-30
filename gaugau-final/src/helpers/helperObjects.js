@@ -52,3 +52,34 @@ export const COLUMNS = [
     },
   },
 ];
+
+export const ClientCOLUMNS = [
+  {
+    Header: "S.no",
+    accessor: "id",
+  },
+  {
+    Header: "Client",
+    accessor: "client_name",
+  },
+  {
+    Header: "Description",
+    accessor: "descriptions",
+  },
+  { Header: "Mobile", accessor: "mobile_number" },
+  {
+    Header: "Actions",
+    Cell: (row) => {
+      return (
+        <div className="flex justify-center gap-5">
+          <MdOutlineDelete
+            onClick={() => console.log(row)}
+            className="cursor-pointer"
+            size={20}
+          />
+          <FiEdit className="cursor-pointer" size={20} />
+        </div>
+      );
+    },
+  },
+];

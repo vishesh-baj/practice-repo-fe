@@ -2,8 +2,10 @@ import { Fragment, useState } from "react";
 import { Tab } from "@headlessui/react";
 import Input from "../../components/Input/Input";
 import { postClient } from "../../api/clients";
+import DataTable from "../../components/DataTable/DataTable";
+import { ClientCOLUMNS } from "../../helpers/helperObjects";
 
-const ClientsTabs = () => {
+const ClientsTabs = ({ data }) => {
   const [newClientData, setNewClientData] = useState({
     client_name: "",
     mobile_number: "",
@@ -91,7 +93,9 @@ const ClientsTabs = () => {
             </div>
           </form>
         </Tab.Panel>
-        <Tab.Panel>Content 2</Tab.Panel>
+        <Tab.Panel>
+          <DataTable customerColumns={ClientCOLUMNS} customerData={data} />
+        </Tab.Panel>
         {/* ... */}
       </Tab.Panels>
     </Tab.Group>

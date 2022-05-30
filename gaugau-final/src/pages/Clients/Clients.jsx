@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getClients } from "../../api/clients";
 import ClientsTabs from "./Tabs";
 const Clients = () => {
+  const [clientsData, setClientsData] = useState([]);
   useEffect(() => {
     let fetchData = async () => {
       const fetchData = await getClients();
+      setClientsData(fetchData);
       console.log(fetchData);
     };
     fetchData();
@@ -12,7 +14,7 @@ const Clients = () => {
 
   return (
     <div>
-      <ClientsTabs />
+      <ClientsTabs data={clientsData} />
     </div>
   );
 };
