@@ -8,28 +8,28 @@ const Sidebar = () => {
       {/* div for logo */}
       <div className="w-full h-[8vh] flex justify-center items-center bg-teal-500">
         {/*  Here Image will come in future */}
-        <h1>GauGau</h1>
+        <span>GauGau</span>
       </div>
       <ul className="w-full h-auto bg-white">
         <NavLink to={PATHS.dashboard}>
           <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
-            <h1>Dashboard</h1>
+            <span>Dashboard</span>
           </li>
         </NavLink>
         <hr />
         <NavLink to={PATHS.customers}>
           <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
-            <h1>Customer</h1>
+            <span>Customer</span>
           </li>
         </NavLink>
         <NavLink to={PATHS.clients}>
           <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
-            <h1>Client</h1>
+            <span>Client</span>
           </li>
         </NavLink>
         <NavLink to={PATHS.campaigns}>
           <li className="pl-5 py-4 hover:text-white hover:bg-primaryColor">
-            <h1>Campaign</h1>
+            <span>Campaign</span>
           </li>
         </NavLink>
       </ul>
