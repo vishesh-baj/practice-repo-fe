@@ -1,7 +1,11 @@
 import React from "react";
-
+import CampaignTabs from "./Tabs";
 const Campaigns = () => {
-  return <div>Campaigns</div>;
+  return (
+    <div>
+      <CampaignTabs />
+    </div>
+  );
 };
 
 export default Campaigns;

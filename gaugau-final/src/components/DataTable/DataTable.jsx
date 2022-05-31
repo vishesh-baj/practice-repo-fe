@@ -9,9 +9,9 @@ import GlobalFilter from "./GlobalFilter";
 import "./table.css";
 
 const DataTable = ({ customerData, customerColumns }) => {
-  const columns = useMemo(() => customerColumns, []);
+  const columns = useMemo(() => customerColumns, [customerColumns]);
 
-  const data = useMemo(() => customerData, []);
+  const data = useMemo(() => customerData, [customerData]);
   const tableInstance = useTable(
     {
       columns,
