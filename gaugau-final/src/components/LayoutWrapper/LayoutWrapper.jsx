@@ -4,7 +4,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       <Navbar />
-      <div className="   h-[92] p-6 md:p-10 ">{children}</div>
+      <div className="h-[92] p-6 md:p-10 ">{children}</div>
     </>
   );
 };

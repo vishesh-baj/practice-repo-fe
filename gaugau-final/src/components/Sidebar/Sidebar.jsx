@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { PATHS } from "../../routes/paths";
 import logo from "../../assets/logo.svg";
 import { AiOutlineMenu } from "react-icons/ai";
+
 import {
   MdOutlineDashboardCustomize,
   MdOutlinePeopleAlt,
   MdOutlineCampaign,
 } from "react-icons/md";
 import { RiCustomerService2Line } from "react-icons/ri";
+
 const Sidebar = () => {
   const [sidebarToggle, setSidebarToggle] = useState(true);
   const handleClick = () => {
@@ -19,7 +21,7 @@ const Sidebar = () => {
     <div
       className={`${
         sidebarToggle ? "w-0 md:w-20" : "w-0 md:w-60 "
-      } transform  h-full shadow-md bg-white`}
+      } transform  h-full shadow-inner bg-white`}
     >
       <ul className="relative ">
         <li className="flex justify-center gap-5 items-center relative py-4">

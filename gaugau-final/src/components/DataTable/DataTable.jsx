@@ -44,7 +44,7 @@ const DataTable = ({ customerData, customerColumns }) => {
   const { globalFilter, pageIndex } = state;
   return (
     <>
-      <div className="flex w-full justify-between overflow-scroll items-center">
+      <div className="flex w-full justify-between overflow-x-auto items-center">
         <h1 className="font-semibold text-2xl">Customer List</h1>
         <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
       </div>

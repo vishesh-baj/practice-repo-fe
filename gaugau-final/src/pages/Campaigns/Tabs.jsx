@@ -1,8 +1,28 @@
 import { Tab } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Input from "../../components/Input/Input";
+import { GoSettings } from "react-icons/go";
+import CloseButton from "../../assets/close.svg";
 
 const CampaignTabs = () => {
+  const [settingsSidebarToggle, setSettingsSidebarToggle] = useState(false);
+
+  const [filterObject, setFilterObject] = useState({});
+
+  const handleClick = () => {
+    setSettingsSidebarToggle(!settingsSidebarToggle);
+    console.log(settingsSidebarToggle);
+  };
+
+  const handleChange = (e) => {
+    console.log("Change occured", e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submit Form");
+  };
+
   return (
     <Tab.Group>
       <Tab.List className="w-full flex gap-5 justify-between">
@@ -40,7 +60,7 @@ const CampaignTabs = () => {
           <h1 className="text-xl font-bold">Create Campaign</h1>
 
           <br />
-          <form>
+          <form className="flex flex-col">
             <Input
               id="client-input-01"
               type="text"
@@ -50,10 +70,10 @@ const CampaignTabs = () => {
               //   valueProp={newClientData.client_name}
             />
             <Input
-              id="clien-input-02"
+              id="client-input-02"
               type="text"
               name="descriptions"
-              label="Company Title"
+              label="Campaign Title"
               //   onChangeProp={handleChange}
               //   valueProp={newClientData.descriptions}
             />
@@ -64,14 +84,56 @@ const CampaignTabs = () => {
               </button>
               <button
                 type="submit"
-                className="w-1/2 text-white bg-primaryColor py-2 px-4"
+                className="w-1/2 text-gray-50 bg-primaryColor py-2 px-4"
               >
-                Save
+                Publish
               </button>
             </div>
           </form>
         </Tab.Panel>
-        <Tab.Panel>Content 2</Tab.Panel>
+        <Tab.Panel className="relative">
+          <h1>Here Datatable will come</h1>
+          <button
+            onClick={handleClick}
+            className="px-5 py-2 flex justify-center gap-2 border-black border "
+          >
+            <GoSettings size={20} />
+            <span>Filter</span>
+          </button>
+
+          {/* right settings bar */}
+          <div className="absolute -right-10 -top-[5.5em] w-[30vw] h-[92vh] bg-white drop-shadow-lg px-5">
+            <img
+              className="absolute right-5 top-5"
+              src={CloseButton}
+              alt="close"
+              width={20}
+            />
+            <div className="relative">
+              <form className="mt-20">
+                <Input
+                  label="Client"
+                  id="campaign-input-01"
+                  type="text"
+                  name="client"
+                  placeholder={"Select"}
+                  onChangeProp={handleChange}
+                />
+                <Input
+                  label="Campaign Title"
+                  id="campaign-input-01"
+                  type="text"
+                  name="client"
+                  onChangeProp={handleChange}
+                />
+
+                <div>
+                  
+                </div>
+              </form>
+            </div>
+          </div>
+        </Tab.Panel>
         {/* ... */}
       </Tab.Panels>
     </Tab.Group>
