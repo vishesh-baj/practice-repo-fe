@@ -3,9 +3,14 @@ import { Link } from "react-router-dom";
 import { PATHS } from "../../routes/paths";
 import logo from "../../assets/logo.svg";
 import { AiOutlineMenu } from "react-icons/ai";
-
+import {
+  MdOutlineDashboardCustomize,
+  MdOutlinePeopleAlt,
+  MdOutlineCampaign,
+} from "react-icons/md";
+import { RiCustomerService2Line } from "react-icons/ri";
 const Sidebar = () => {
-  const [sidebarToggle, setSidebarToggle] = useState(false);
+  const [sidebarToggle, setSidebarToggle] = useState(true);
   const handleClick = () => {
     setSidebarToggle(!sidebarToggle);
   };
@@ -13,12 +18,14 @@ const Sidebar = () => {
   return (
     <div
       className={`${
-        sidebarToggle ? "w-20" : "w-60 "
+        sidebarToggle ? "w-0 md:w-20" : "w-0 md:w-60 "
       } transform  h-full shadow-md bg-white`}
     >
       <ul className="relative ">
         <li className="flex justify-center gap-5 items-center relative py-4">
-          {!sidebarToggle && <img src={logo} alt="logo" />}
+          {!sidebarToggle && (
+            <img className="md:block hidden" src={logo} alt="logo" />
+          )}
           <div>
             <AiOutlineMenu
               className="cursor-pointer"
@@ -30,45 +37,62 @@ const Sidebar = () => {
         <li className="relative">
           <Link
             to={PATHS.dashboard}
-            className="flex pl-5 items-center text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap  hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-            href="#!"
+            className={`flex ${
+              sidebarToggle ? "justify-center" : "items-start pl-5"
+            } text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap   hover:bg-primaryColor hover:text-white transition duration-300 ease-in-out`}
             data-mdb-ripple="true"
             data-mdb-ripple-color="dark"
           >
-            {!sidebarToggle ? "Dashboard" : "D Icon"}
+            {!sidebarToggle ? (
+              "Dashboard"
+            ) : (
+              <MdOutlineDashboardCustomize size={20} />
+            )}
           </Link>
         </li>
         <li className="relative">
           <Link
             to={PATHS.customers}
-            className="flex pl-5 items-center text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap  hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-            href="#!"
+            className={`flex ${
+              sidebarToggle ? "justify-center" : "items-start pl-5"
+            } text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap   hover:bg-primaryColor hover:text-white transition duration-300 ease-in-out`}
             data-mdb-ripple="true"
             data-mdb-ripple-color="dark"
           >
-            {!sidebarToggle ? "Customers" : "Cu Icon"}
+            {!sidebarToggle ? (
+              <span className="md:block hidden">Customers</span>
+            ) : (
+              <RiCustomerService2Line size={20} />
+            )}
           </Link>
         </li>
         <li className="relative">
           <Link
             to={PATHS.clients}
-            className="flex pl-5 items-center text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap  hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-            href="#!"
+            className={`flex ${
+              sidebarToggle ? "justify-center" : "items-start pl-5"
+            } text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap   hover:bg-primaryColor hover:text-white transition duration-300 ease-in-out`}
             data-mdb-ripple="true"
             data-mdb-ripple-color="dark"
           >
-            {!sidebarToggle ? "Clients" : "Cl Icon"}
+            {!sidebarToggle ? "Clients" : <MdOutlinePeopleAlt size={20} />}
           </Link>
         </li>
         <li className="relative">
           <Link
             to={PATHS.campaigns}
-            className="flex pl-5 items-center text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap  hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+            className={`flex ${
+              sidebarToggle ? "justify-center" : "items-start pl-5"
+            } text-sm py-4 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap   hover:bg-primaryColor hover:text-white transition duration-300 ease-in-out`}
             href="#!"
             data-mdb-ripple="true"
             data-mdb-ripple-color="dark"
           >
-            {!sidebarToggle ? "Campaign" : "Ca Icon"}
+            {!sidebarToggle ? (
+              "Campaign"
+            ) : (
+              <MdOutlineCampaign className="text-center" size={20} />
+            )}
           </Link>
         </li>
       </ul>
