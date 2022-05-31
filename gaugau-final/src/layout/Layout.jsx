@@ -5,9 +5,12 @@ import Sidebar from "../components/Sidebar/Sidebar";
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
-      <Sidebar />
-      <LayoutWrapper>{children}</LayoutWrapper>
+      <div className="flex w-full h-screen">
+        <Sidebar />
+        <div className="flex flex-col w-full  ">
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </div>
+      </div>
     </>
   );
 };
