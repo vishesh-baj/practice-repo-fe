@@ -5,7 +5,7 @@ const DatePicker = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <div>
-      <DatePicker
+      <ReactDatePicker
         selected={startDate}
         onChange={(date) => setStartDate(date)}
       />

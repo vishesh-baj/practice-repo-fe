@@ -53,7 +53,6 @@ export const COLUMNS = [
   },
 ];
 
-// Clients Column Object
 export const ClientCOLUMNS = [
   {
     Header: "S.no",
@@ -83,18 +82,4 @@ export const ClientCOLUMNS = [
       );
     },
   },
-];
-
-// campaign column object
-export const CampaignListCOUMNS = [
-  {
-    Header: "S.no",
-    accessor: "id",
-  },
-  { Header: "Campaign Name", accessor: "campaign_name" },
-  { Header: "Date", accessor: "date" },
-  { Header: "Client", accessor: "client" },
-  { Header: "User List", accessor: "user_list" },
-  { Header: "Status", accessor: "status" },
-  { Header: "Actions", accessor: "delete" },
 ];
