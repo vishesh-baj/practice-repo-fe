@@ -1,7 +1,11 @@
 import "./App.css";
+import BoxComponent from "./components/LayoutComponents/BoxComponent";
+import GridComponent from "./components/LayoutComponents/GridComponent";
+import MuiAutocomplete from "./components/MuiAutocomplete";
 import MuiButton from "./components/MuiButton";
 import MuiCheckbox from "./components/MuiCheckbox";
 import MuiRadioButton from "./components/MuiRadioButton";
+import MuiRating from "./components/MuiRating";
 import MuiSelect from "./components/MuiSelect";
 import MuiSwitch from "./components/MuiSwitch";
 import MuiTextField from "./components/MuiTextField";
@@ -16,6 +20,10 @@ function App() {
       <MuiRadioButton />
       <MuiCheckbox />
       <MuiSwitch />
+      <MuiRating />
+      <MuiAutocomplete />
+      <BoxComponent />
+      <GridComponent />
     </div>
   );
 }
