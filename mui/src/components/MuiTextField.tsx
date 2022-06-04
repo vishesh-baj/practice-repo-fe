@@ -14,6 +14,7 @@ const MuiTextField = () => {
           label="Name"
           variant="outlined"
           error={!value}
+          required
           helperText={
             !value ? "Required" : "Do not share your password with anyone"
           }
