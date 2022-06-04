@@ -3,6 +3,7 @@ import BoxComponent from "./components/LayoutComponents/BoxComponent";
 import GridComponent from "./components/LayoutComponents/GridComponent";
 import MuiAutocomplete from "./components/MuiAutocomplete";
 import MuiButton from "./components/MuiButton";
+import MuiCard from "./components/MuiCard";
 import MuiCheckbox from "./components/MuiCheckbox";
 import MuiRadioButton from "./components/MuiRadioButton";
 import MuiRating from "./components/MuiRating";
@@ -24,6 +25,7 @@ function App() {
       <MuiAutocomplete />
       <BoxComponent />
       <GridComponent />
+      <MuiCard />
     </div>
   );
 }

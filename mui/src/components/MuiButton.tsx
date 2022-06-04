@@ -9,9 +9,9 @@ import {
 import FormatBoldIcon from "@mui/icons-material/FormatBold";
 import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
-
 import SendIcon from "@mui/icons-material/Send";
 import React, { useState } from "react";
+
 const MuiButton = () => {
   const [formats, setFormats] = useState<string | null>(null);
   console.log(formats);
@@ -26,7 +26,7 @@ const MuiButton = () => {
   return (
     <Stack spacing={2}>
       <Stack spacing={2} direction="row">
-        <Button variant="text" href="http://google.com">
+        <Button variant="text" href="https://google.com">
           Text
         </Button>
         <Button variant="contained">Contained</Button>
@@ -67,6 +67,7 @@ const MuiButton = () => {
       </Stack>
       <Stack spacing={2} direction="row">
         {/* start/end icon to add icon to front or back fo the nutton */}
+
         <Button
           variant="contained"
           disableRipple

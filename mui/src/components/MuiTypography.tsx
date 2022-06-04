@@ -1,4 +1,5 @@
 import { Stack, Typography } from "@mui/material";
+
 const MuiTypography = () => {
   return (
     <Stack spacing={2}>

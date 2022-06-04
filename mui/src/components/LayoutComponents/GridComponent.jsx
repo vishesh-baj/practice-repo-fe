@@ -1,6 +1,7 @@
 import { Grid, Box } from "@mui/material";
 
 const GridComponent = () => {
+  //   Grid component is specifically used for the construction of two dimensional grid
   return (
     <Grid container my={4} spacing={2}>
       <Grid xs={6} item>
