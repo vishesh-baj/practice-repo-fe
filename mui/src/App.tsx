@@ -23,6 +23,9 @@ import MuiBottomNavigation from "./components/MuiBottomNavigation";
 import BoxComponent from "./components/LayoutComponents/BoxComponent";
 import GridComponent from "./components/LayoutComponents/GridComponent";
 import "./App.css";
+import MuiTooltip from "./components/MuiTooltip";
+import MuiAlert from "./components/MuiAlert";
+import MuiSnackbar from "./components/MuiSnackbar";
 
 function App() {
   return (
@@ -51,6 +54,9 @@ function App() {
       <MuiBadge />
       <MuiList />
       <MuiChip />
+      <MuiTooltip />
+      <MuiAlert />
+      <MuiSnackbar />
     </div>
   );
 }
