@@ -28,5 +28,4 @@ const MuiDrawer = () => {
     </>
   );
 };
-
 export default MuiDrawer;

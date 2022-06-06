@@ -1,5 +1,3 @@
-import BoxComponent from "./components/LayoutComponents/BoxComponent";
-import GridComponent from "./components/LayoutComponents/GridComponent";
 import MuiAutocomplete from "./components/MuiAutocomplete";
 import MuiButton from "./components/MuiButton";
 import MuiCard from "./components/MuiCard";
@@ -17,10 +15,13 @@ import MuiLink from "./components/MuiLink";
 import MuiBreadcrumb from "./components/MuiBreadcrumb";
 import MuiDrawer from "./components/MuiDrawer";
 import MuiSpeedDial from "./components/MuiSpeedDial";
-import MuiBottomNavigation from "./components/MuiBottomNavigation";
 import MuiAvatar from "./components/MuiAvatar";
 import MuiBadge from "./components/MuiBadge";
+import MuiBottomNavigation from "./components/MuiBottomNavigation";
+import BoxComponent from "./components/LayoutComponents/BoxComponent";
+import GridComponent from "./components/LayoutComponents/GridComponent";
 import "./App.css";
+import MuiList from "./components/MuiList";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
       <MuiBottomNavigation />
       <MuiAvatar />
       <MuiBadge />
+      <MuiList />
     </div>
   );
 }
