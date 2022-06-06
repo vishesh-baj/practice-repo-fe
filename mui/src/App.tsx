@@ -12,7 +12,6 @@ import MuiTextField from "./components/MuiTextField";
 import MuiTypography from "./components/MuiTypography";
 import MuiAccordian from "./components/MuiAccordian";
 import MuiImageList from "./components/MuiImageList";
-import "./App.css";
 import MuiNavbar from "./components/MuiNavbar";
 import MuiLink from "./components/MuiLink";
 import MuiBreadcrumb from "./components/MuiBreadcrumb";
@@ -20,6 +19,8 @@ import MuiDrawer from "./components/MuiDrawer";
 import MuiSpeedDial from "./components/MuiSpeedDial";
 import MuiBottomNavigation from "./components/MuiBottomNavigation";
 import MuiAvatar from "./components/MuiAvatar";
+import MuiBadge from "./components/MuiBadge";
+import "./App.css";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <MuiSpeedDial />
       <MuiBottomNavigation />
       <MuiAvatar />
+      <MuiBadge />
     </div>
   );
 }
