@@ -17,11 +17,12 @@ import MuiDrawer from "./components/MuiDrawer";
 import MuiSpeedDial from "./components/MuiSpeedDial";
 import MuiAvatar from "./components/MuiAvatar";
 import MuiBadge from "./components/MuiBadge";
+import MuiList from "./components/MuiList";
+import MuiChip from "./components/MuiChip";
 import MuiBottomNavigation from "./components/MuiBottomNavigation";
 import BoxComponent from "./components/LayoutComponents/BoxComponent";
 import GridComponent from "./components/LayoutComponents/GridComponent";
 import "./App.css";
-import MuiList from "./components/MuiList";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
       <MuiAvatar />
       <MuiBadge />
       <MuiList />
+      <MuiChip />
     </div>
   );
 }
