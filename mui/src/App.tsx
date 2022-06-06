@@ -10,8 +10,10 @@ import MuiSelect from "./components/MuiSelect";
 import MuiSwitch from "./components/MuiSwitch";
 import MuiTextField from "./components/MuiTextField";
 import MuiTypography from "./components/MuiTypography";
-import "./App.css";
 import MuiAccordian from "./components/MuiAccordian";
+import MuiImageList from "./components/MuiImageList";
+import "./App.css";
+
 function App() {
   return (
     <div className="App">
@@ -28,6 +30,7 @@ function App() {
       <GridComponent />
       <MuiCard />
       <MuiAccordian />
+      <MuiImageList />
     </div>
   );
 }

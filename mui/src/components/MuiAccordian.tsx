@@ -9,13 +9,16 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 const MuiAccordian = () => {
   const [expanded, setExpanded] = useState<string | false>(false);
+  const handleChange = (isExpanded: boolean, panel: string) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <div>
       {/* Its a wrapper component */}
       <Accordion
         expanded={expanded === "panel1"}
-        onChange={() => setExpanded("panel1")}
+        onChange={(_event, isExpanded) => handleChange(isExpanded, "panel1")}
       >
         <AccordionSummary
           id="panel1-header"
@@ -35,7 +38,7 @@ const MuiAccordian = () => {
 
       <Accordion
         expanded={expanded === "panel2"}
-        onChange={() => setExpanded("panel2")}
+        onChange={(_event, isExpanded) => handleChange(isExpanded, "panel2")}
       >
         <AccordionSummary
           id="panel2-header"
@@ -55,7 +58,7 @@ const MuiAccordian = () => {
 
       <Accordion
         expanded={expanded === "panel3"}
-        onChange={() => setExpanded("panel3")}
+        onChange={(_event, isExpanded) => handleChange(isExpanded, "panel3")}
       >
         <AccordionSummary
           id="panel3-header"
