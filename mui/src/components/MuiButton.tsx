@@ -89,10 +89,7 @@ const MuiButton = () => {
 
       {/* BUTTON GROUP */}
       <Stack direction="row">
-        <ButtonGroup
-          aria-aria-label="alignment button group"
-          variant="contained"
-        >
+        <ButtonGroup aria-label="alignment button group" variant="contained">
           <Button
             onClick={() => alert("Clicked on button group first button")}
             color="primary"
@@ -110,7 +107,7 @@ const MuiButton = () => {
           variant="outlined"
           size="small"
           color="secondary"
-          aria-aria-label="alignment button group"
+          aria-label="alignment button group"
         >
           <Button color="primary">Left</Button>
           <Button color="primary">Center</Button>

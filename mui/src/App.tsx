@@ -1,4 +1,3 @@
-import "./App.css";
 import BoxComponent from "./components/LayoutComponents/BoxComponent";
 import GridComponent from "./components/LayoutComponents/GridComponent";
 import MuiAutocomplete from "./components/MuiAutocomplete";
@@ -11,6 +10,8 @@ import MuiSelect from "./components/MuiSelect";
 import MuiSwitch from "./components/MuiSwitch";
 import MuiTextField from "./components/MuiTextField";
 import MuiTypography from "./components/MuiTypography";
+import "./App.css";
+import MuiAccordian from "./components/MuiAccordian";
 function App() {
   return (
     <div className="App">
@@ -26,8 +27,8 @@ function App() {
       <BoxComponent />
       <GridComponent />
       <MuiCard />
+      <MuiAccordian />
     </div>
   );
 }
-
 export default App;
