@@ -13,6 +13,8 @@ import MuiTypography from "./components/MuiTypography";
 import MuiAccordian from "./components/MuiAccordian";
 import MuiImageList from "./components/MuiImageList";
 import "./App.css";
+import MuiNavbar from "./components/MuiNavbar";
+import MuiLink from "./components/MuiLink";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
       <MuiCard />
       <MuiAccordian />
       <MuiImageList />
+      <MuiNavbar />
+      <MuiLink />
     </div>
   );
 }

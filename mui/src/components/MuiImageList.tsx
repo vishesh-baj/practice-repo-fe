@@ -104,5 +104,4 @@ const MuiImageList = () => {
     </Stack>
   );
 };
-
 export default MuiImageList;
